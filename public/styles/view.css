@@ -1,0 +1,205 @@
+/* View Records Page Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f9;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header Styles */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 16px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .page-header h1 {
+    color: #2c3e50;
+    font-size: 24px;
+  }
+  
+  .btn-new {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-new:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Card Grid Layout */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  /* Individual Card Styling */
+  .card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-header {
+    padding: 16px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-header h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .id-badge {
+    background-color: #e9ecef;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #6c757d;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  .card-content p {
+    margin-bottom: 8px;
+    color: #495057;
+    font-size: 14px;
+  }
+  
+  .card-content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .card-content p strong {
+    color: #2c3e50;
+    font-weight: 500;
+    margin-right: 4px;
+  }
+  
+  /* Card Actions */
+  .card-actions {
+    padding: 16px;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    gap: 12px;
+  }
+  
+  .btn-edit {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    flex: 1;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-edit:hover {
+    background-color: #218838;
+  }
+  
+  .delete-form {
+    flex: 1;
+  }
+  
+  .btn-delete {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-delete:hover {
+    background-color: #c82333;
+  }
+  
+  /* Empty State */
+  .no-records {
+    text-align: center;
+    padding: 48px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .no-records p {
+    color: #6c757d;
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .page-header {
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
+  
+    .card-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .btn-new {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Animation for new cards */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .card {
+    animation: fadeIn 0.3s ease-out;
+  }
